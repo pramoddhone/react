@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import Pet from "./Pet";
 
 const App = () => {
-  return React.createElement(
+  /*return React.createElement(
     "div",
     { id: "" },
     React.createElement("h1", {}, "Adopt Me!"),
@@ -22,7 +22,19 @@ const App = () => {
       animal: "Mango",
       breed: "Hapoos"
     })
+  );*/
+
+  return (
+    <div>
+      <h1 id="something-important">Adopt Me!</h1>
+      <Pet name="Luna" animal="Dog" breed="haveneese"></Pet>
+      <Pet name="Pepper" animal="Bird" breed="Cokatiel"></Pet>
+      <Pet name="Doink" animal="Cat" breed="Mix"></Pet>
+    </div>
   );
 };
 
-render(React.createElement(App), document.getElementById("root"));
+render(
+  /*React.createElement(App)*/ <App></App>,
+  document.getElementById("root")
+);
